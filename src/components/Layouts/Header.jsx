@@ -1,45 +1,40 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import '../../styles/Header.css';
+import { Link } from 'react-router-dom';
+import logo from'../../assets/logo/logo.png';
+import { BsFillBagFill } from "react-icons/bs";
 
 function Header() {
   return (
-    <>
-      <Navbar bg="dark" data-bs-theme="dark">
+    <header>
+      <Navbar collapseOnSelect expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
+          <Navbar.Brand href="#home">
+            <Link to='/' className='logo'>
+             <img src={logo} alt="Logo" className='img-fluid' />
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link as={Link} to='/'>Home</Nav.Link>
+              <Nav.Link as={Link} to='/about'>About</Nav.Link>
+              <Nav.Link as={Link} to='/menu'>Our Menu</Nav.Link>
+              <Nav.Link as={Link} to='/shop'>Shop</Nav.Link>
+              <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
+              <Nav.Link as={Link} to='/contact'>Contact</Nav.Link>
+              <Nav.Link as={Link} to='/'>
+                <div className="cart">
+                  <Link><BsFillBagFill className='fs-5'/></Link>
+                  <em className='roundpoint'>2</em>
+                </div>
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
-      <br />
-      <Navbar bg="primary" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-
-      <br />
-      <Navbar bg="light" data-bs-theme="light">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-
-    </>
+    </header>
   );
 }
 
