@@ -9,7 +9,7 @@ function Section1() {
         <Container>
          <Row>
             <Col lg={7} className='mb-5 mb-lg-0'>
-                <div className="postion:relative">
+                <div className="position-relative">
                   <img src={Burger} alt="Hero" className='img-fluid'/>
                   <div className="price_badge">
                     <div className="badge_text">
@@ -23,11 +23,11 @@ function Section1() {
                 <div className="hero_text text-center">
                     <h1 className="text-white">New Burger</h1>
                     <h2 className="text-white">With Onions</h2>
-                    <p className="text-white pt-2 pb-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                    <p className="text-white pt-2 pb-4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <Link to='/' className='btn order_now'>
+                      Order Now
+                    </Link>
                 </div>
-                <Link to='/' className='btn order_now'>
-                    Order Now
-                </Link>
             </Col>
          </Row>
         </Container>
@@ -35,4 +35,4 @@ function Section1() {
   )
 }
 
-export default Section1
+export default Section1;
