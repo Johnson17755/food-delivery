@@ -32,7 +32,7 @@ function Section1() {
          </Row>
         </Container>
     </section>
-  )
-}
+  );
+};
 
 export default Section1;
