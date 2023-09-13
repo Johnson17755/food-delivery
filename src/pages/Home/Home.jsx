@@ -3,6 +3,7 @@ import Layout from '../../components/Layouts/Layout';
 import '../../styles/Home.css';
 import Section1 from './Section1';
 import Section2 from './Section2';
+import Section3 from './Section3';
 
 
 
@@ -15,6 +16,9 @@ function Home() {
 
         {/* Home Section About */}
         <Section2 />
+
+        {/* Home Section Menu */}
+        <Section3 />
       </Layout>
     </>
   );
