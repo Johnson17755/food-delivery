@@ -35,7 +35,7 @@ const mockData = [
     id: '0003',
     image: Image3,
     title: 'Black Sheep',
-    paragraph: 'American Cheese, Tomatoes Relish, Avocado, Lettuce, Red Onions',
+    paragraph: 'American Cheese, Tomatoes Relish, Avocado, Lettuce,Onions',
     rating: 4,
     price: 169.15,
   },
@@ -87,9 +87,9 @@ function Section3() {
     <section className='menu_section'>
       <Container>
         <Row>
-          <Col lg={{span:8, offset:2}}>
+          <Col lg={{span: 8, offset:2 }} className='text-center mb-5'>
             <h2>OUR MEGA BURGERS</h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p className='paragraph'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
           </Col>
         </Row>
         <Row>{mockData.map((cardData, index) =>(
@@ -102,7 +102,30 @@ function Section3() {
           price={cardData.price}
           // renderRatingIcons={renderRatingIcons}
           />
-        ))}</Row>
+        ))}
+        </Row>
+
+
+        <Row className='pt-5'>
+          <Col sm={6} lg={5}>
+            <div className="ads_box ads_img1 mb-5 mb-md-0">
+              <h4 className="mb-0">GET YOUR FREE</h4>
+              <h5>CHEESE FRIES</h5>
+              <Link to='/' className='btn btn_red px-4 rounded-0'>
+                Learn More
+              </Link>
+            </div>
+          </Col>
+          <Col sm={6} lg={7}>
+            <div className="ads_box ads_img">
+              <h4 className="mb-0">GET YOUR FREE</h4>
+              <h5>CHEESE FRIES</h5>
+              <Link to='/' className='btn btn_red px-4 rounded-0'>
+                Learn More
+              </Link>
+            </div>
+          </Col>
+        </Row>
       </Container>
     </section>
   )

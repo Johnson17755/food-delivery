@@ -1,7 +1,9 @@
 import React from 'react';
 import {Col, Card} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
- import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BsFillHandbagFill } from "react-icons/bs";
+
 
 function Cards( {image, rating, title, paragraph, price} ) {
   return (
@@ -14,7 +16,7 @@ function Cards( {image, rating, title, paragraph, price} ) {
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="item_rating">{rating}</div>
                     <div className="wishlist">
-                    <Link><AiOutlineHeart className='fs-5'/></Link>
+                    <AiOutlineHeart className='i fs-5'/>
                     </div>
                 </div>
 
@@ -25,8 +27,8 @@ function Cards( {image, rating, title, paragraph, price} ) {
                         <h5 className='mb-0'>${price}</h5>
                     </div>
                     <div className="add_to_card">
-                        <Link to="/"><i class="bi bi-bag me-2"></i>
-                        Add To Cart
+                        <Link to="/"><BsFillHandbagFill className='i fs-5'/>
+                         Add To Cart
                         </Link>
                     </div>
                 </div>
