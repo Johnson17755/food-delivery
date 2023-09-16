@@ -2,7 +2,7 @@ import React from 'react';
 import {Col, Card} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AiOutlineHeart } from "react-icons/ai";
-import { BsFillHandbagFill } from "react-icons/bs";
+import { BiShoppingBag } from "react-icons/bi";
 
 
 function Cards( {image, rating, title, paragraph, price} ) {
@@ -16,7 +16,7 @@ function Cards( {image, rating, title, paragraph, price} ) {
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="item_rating">{rating}</div>
                     <div className="wishlist">
-                    <AiOutlineHeart className='i fs-5'/>
+                    <AiOutlineHeart className='i'/>
                     </div>
                 </div>
 
@@ -27,7 +27,7 @@ function Cards( {image, rating, title, paragraph, price} ) {
                         <h5 className='mb-0'>${price}</h5>
                     </div>
                     <div className="add_to_card">
-                        <Link to="/"><BsFillHandbagFill className='i fs-5'/>
+                        <Link to="/"><BiShoppingBag className='i me-2'/>
                          Add To Cart
                         </Link>
                     </div>
