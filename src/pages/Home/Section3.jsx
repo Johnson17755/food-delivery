@@ -10,10 +10,9 @@ import Image6 from '../../assets/menu/burger-16.jpg';
 import Image7 from '../../assets/menu/burger-17.jpg';
 import Image8 from '../../assets/menu/burger-18.jpg';
 import Cards from '../../components/Layouts/Cards';
-import { BsHeartHalf } from "react-icons/bs";
-import { AiOutlineHeart } from "react-icons/ai";
-import { BsFillStarFill } from "react-icons/bs";
-
+import { BsStarHalf } from "react-icons/bs";
+import { BiSolidStar } from "react-icons/bi";
+import { AiOutlineStar } from "react-icons/ai";
 
 
 // DATA CARD
@@ -90,13 +89,13 @@ const renderRatingIcons = (rating) =>{
 
   for(let i = 0; i < 5; i++){
     if(rating > 0.5){
-      stars.push(<AiOutlineHeart key={i} />)
+      stars.push(<BiSolidStar key={i} className='i' />)
       rating--;
     }else if(rating > 0 && rating < 1){
-      stars.push(<BsHeartHalf key={"half"} />)
+      stars.push(<BsStarHalf key={"half"} className='i' />)
       rating--;
     }else{
-      stars.push(<BsFillStarFill key={`empty${i}`} />)
+      stars.push(<AiOutlineStar key={`empty${i}`} className='i' />)
     }
   }
   return stars;
