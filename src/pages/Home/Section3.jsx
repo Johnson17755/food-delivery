@@ -10,6 +10,9 @@ import Image6 from '../../assets/menu/burger-16.jpg';
 import Image7 from '../../assets/menu/burger-17.jpg';
 import Image8 from '../../assets/menu/burger-18.jpg';
 import Cards from '../../components/Layouts/Cards';
+import { BsHeartHalf } from "react-icons/bs";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BsFillStarFill } from "react-icons/bs";
 
 
 
@@ -82,6 +85,23 @@ const mockData = [
    //add more data objects as needed
 ];
 
+const renderRatingIcons = (rating) =>{
+  const stars=[];
+
+  for(let i = 0; i < 5; i++){
+    if(rating > 0.5){
+      stars.push(<AiOutlineHeart key={i} />)
+      rating--;
+    }else if(rating > 0 && rating < 1){
+      stars.push(<BsHeartHalf key={"half"} />)
+      rating--;
+    }else{
+      stars.push(<BsFillStarFill key={`empty${i}`} />)
+    }
+  }
+  return stars;
+};
+
 function Section3() {
   return (
     <section className='menu_section'>
@@ -100,7 +120,7 @@ function Section3() {
           title={cardData.title}
           paragraph={cardData.paragraph}
           price={cardData.price}
-          // renderRatingIcons={renderRatingIcons}
+          renderRatingIcons={renderRatingIcons}
           />
         ))}
         </Row>

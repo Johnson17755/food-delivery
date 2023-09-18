@@ -5,7 +5,9 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { BiShoppingBag } from "react-icons/bi";
 
 
-function Cards( {image, rating, title, paragraph, price} ) {
+
+
+function Cards( {image, rating, title, paragraph, price, renderRatingIcons} ) {
   return (
     <Col sm={6} lg={4} xl={3} className='mb-4'>
        <Card className="overflow-hidden">
@@ -14,7 +16,7 @@ function Cards( {image, rating, title, paragraph, price} ) {
          </div>
             <Card.Body>
                 <div className="d-flex align-items-center justify-content-between">
-                    <div className="item_rating">{rating}</div>
+                    <div className="item_rating">{renderRatingIcons(rating)}</div>
                     <div className="wishlist">
                     <AiOutlineHeart className='i'/>
                     </div>
