@@ -86,7 +86,6 @@ const mockData = [
 
 const renderRatingIcons = (rating) =>{
   const stars=[];
-
   for(let i = 0; i < 5; i++){
     if(rating > 0.5){
       stars.push(<BiSolidStar key={i} className='i' />)
@@ -123,7 +122,6 @@ function Section3() {
           />
         ))}
         </Row>
-
 
         <Row className='pt-5'>
           <Col sm={6} lg={5}>
