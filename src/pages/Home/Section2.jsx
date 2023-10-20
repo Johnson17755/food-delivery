@@ -57,7 +57,7 @@ function Section2() {
       </Container>
     </section>
    </>
-  )
+  );
 }
 
 export default Section2;
